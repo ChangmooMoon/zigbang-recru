@@ -1,0 +1,12 @@
+@import "utils";
+.footer {
+    background: $oc-gray-2;
+    height: 3rem;
+    display: flex;
+    align-items: space-around;
+    flex-direction: row;
+    .footer-content {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+}
