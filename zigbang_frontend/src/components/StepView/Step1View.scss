@@ -1,0 +1,39 @@
+@import "utils";
+.step-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.1rem;
+  .question-1 {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    .question-icon {
+      margin-right: 0.5rem;
+      font-size: 1.1rem;
+    }
+  }
+  .button-group {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    .button {
+      width: 43vw;
+      height: 8vh;
+      border: solid 1px $oc-gray-4;
+      outline: none;
+      background: white;
+    }
+  }
+  .footer{
+    width: 93%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+  }
+}

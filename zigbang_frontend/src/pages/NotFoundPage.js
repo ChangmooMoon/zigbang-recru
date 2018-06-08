@@ -1,10 +1,10 @@
 import React from "react";
+import NotFoundView from "components/StepView/NotFoundView";
 
 const NotFoundPage = () => {
   return (
     <div>
-      <div />
-      404page
+      <NotFoundView />
     </div>
   );
 };

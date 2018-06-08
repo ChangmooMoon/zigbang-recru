@@ -1,0 +1,13 @@
+@import "utils";
+
+.home{
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: 2rem;
+  .next{
+    display:inherit;
+    justify-content: flex-end;
+  }
+}

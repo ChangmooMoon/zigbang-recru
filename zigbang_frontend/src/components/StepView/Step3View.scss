@@ -1,0 +1,48 @@
+@import "utils";
+
+.step-3{
+  display: inline-block;
+  font-size: 0.7rem;
+  .question-box{
+    width: 100%;
+    margin-top:1rem;
+    padding-left: 1rem;
+    border-bottom: 1px solid $oc-gray-4;
+    .question-text{
+     font-weight: bold;
+    }
+    .buttons{
+      padding-top: 0.7rem;
+      padding-bottom: 1.2rem;
+      .button{
+        border: 1px solid $oc-gray-4;
+        background: white;
+        height: 5vh;
+        width: 45vw;
+      }
+      .button-option1{
+        width: 30vw;
+      }
+      .button-option2{
+        width: 18vw;
+      }
+      .iphone5{
+        font-size: 0.65rem;
+      }
+    }
+  }
+  .exception{
+    border-bottom: none;
+  }
+  .next-button {
+    width: 93%;
+    display: flex;
+    justify-content: flex-end;
+    color: $oc-gray-7;
+    font-size: 0.85rem;
+    .arrow {
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+    }
+  }
+}

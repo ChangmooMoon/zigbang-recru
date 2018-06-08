@@ -1,11 +1,13 @@
 import React from "react";
-import PageTemplate from "components/common/PageTemplate";
+import FinalHeader from "components/atom/FinalHeader";
+import Step4View from "components/StepView/Step4View";
 
 const Step4Page = () => {
   return (
-    <PageTemplate>
-      <div />step4Page
-    </PageTemplate>
+    <div>
+      <FinalHeader />
+      <Step4View />
+    </div>
   );
 };
 

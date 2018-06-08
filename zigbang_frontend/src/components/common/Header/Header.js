@@ -2,6 +2,9 @@ import React from "react";
 import styles from "./Header.scss";
 import classNames from "classnames/bind";
 import { Link } from "react-router-dom";
+// import step_1 from "static/images/step_1.png";
+// import step_2 from "static/images/step_2.png";
+// import step_3 from "static/images/step_2.png";
 
 const cx = classNames.bind(styles);
 
@@ -17,3 +20,4 @@ const Header = () => (
 );
 
 export default Header;
+// 스텝123을 state.page의 값에 따라 conditional rendering
