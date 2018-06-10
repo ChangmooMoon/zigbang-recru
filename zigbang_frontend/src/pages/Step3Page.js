@@ -1,11 +1,11 @@
 import React from "react";
 import PageTemplate from "components/common/PageTemplate";
-import Step3View from "components/StepView/Step3View";
+import Step3Container from "containers/Step3Container";
 
 const Step3Page = () => {
   return (
     <PageTemplate>
-      <Step3View />
+      <Step3Container />
     </PageTemplate>
   );
 };

@@ -29,6 +29,15 @@
       outline: none;
       background: white;
     }
+    .button-selected{
+      width: 43vw;
+      height: 8vh;
+      border: solid 1px $oc-gray-4;
+      outline: none;
+      background: white;
+      background:  #fca730;
+      color: white;
+    }
   }
   .footer{
     width: 93%;

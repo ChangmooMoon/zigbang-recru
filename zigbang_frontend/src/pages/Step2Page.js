@@ -1,11 +1,11 @@
 import React from "react";
 import PageTemplate from "components/common/PageTemplate";
-import Step2View from "components/StepView/Step2View";
+import Step2Container from "containers/Step2Container";
 
 const Step2Page = () => {
   return (
     <PageTemplate>
-      <Step2View />
+      <Step2Container />
     </PageTemplate>
   );
 };
