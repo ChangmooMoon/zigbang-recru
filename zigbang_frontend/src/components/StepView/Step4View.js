@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./Step4View.scss";
 import classNames from "classnames/bind";
+// 필요한값: 30대(나이) 남자(성별) 2018.03.11(날짜)
+// 현재거주중(거주여부) 전월세(자가여부), 기혼(결혼여부)
+// 교통점수, 교통텍스트
+// 환경점수, 환경텍스트
 
 const cx = classNames.bind(styles);
 
@@ -10,7 +14,9 @@ const Step4View = () => (
       <span className={cx('user-fetch-img')}>picture</span>
       <span className={cx('user-state1')}>
         <div>
-          <span className={cx('age-sex')}>30대 남자</span>
+          <span className={cx('age-sex')}>
+            `30대 남자
+            </span>
           <span className={cx('date')}>2018.03.11 등록</span>
         </div>
         <div className={cx('user-state2')}>

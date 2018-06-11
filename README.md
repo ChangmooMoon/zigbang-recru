@@ -10,7 +10,6 @@ Everything in this project is in JavaScript.
 
 - react
 - react-router
-- redux
 - CSS Module + Sass
 
 ### Server
@@ -24,7 +23,6 @@ Everything in this project is in JavaScript.
 
 ### dependencies(Frontend)
 
-- immutable : 상태관리 라이브러리
 - axios : 웹 요청 클라이언트
 - sass-loader, node-sass : Sass 라이브러리
 - open-color : 색상 파렛트

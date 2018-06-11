@@ -16,7 +16,6 @@ class Step1Container extends Component {
     const { handleState } = this
     const { livingPeriodOver5years } = this.state
 
-    console.log(livingPeriodOver5years)
     return (
       <Step1View
         handleState={handleState}

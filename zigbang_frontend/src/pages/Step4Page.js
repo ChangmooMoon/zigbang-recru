@@ -1,6 +1,6 @@
 import React from "react";
 import FinalHeader from "components/atom/FinalHeader";
-import Step4View from "components/StepView/Step4View";
+import Step4View from "components/StepView/Step4View"
 
 const Step4Page = () => {
   return (
