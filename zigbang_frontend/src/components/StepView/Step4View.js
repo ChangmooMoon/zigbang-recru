@@ -1,46 +1,74 @@
 import React from "react";
 import styles from "./Step4View.scss";
 import classNames from "classnames/bind";
-// 필요한값: 30대(나이) 남자(성별) 2018.03.11(날짜)
-// 현재거주중(거주여부) 전월세(자가여부), 기혼(결혼여부)
-// 교통점수, 교통텍스트
-// 환경점수, 환경텍스트
+import ReactStars from 'react-stars'
 
 const cx = classNames.bind(styles);
 
-const Step4View = () => (
+const Step4View = ({
+  age,
+  sex,
+  date,
+  whenYouLive,
+  resiType,
+  marrital,
+  trafficScore,
+  trafficText,
+  envirScore,
+  envirText,
+  imagesrc
+}) => (
   <div className={cx("step-4")}>
     <div className={cx('profile-box')}>
-      <span className={cx('user-fetch-img')}>picture</span>
+      <span className={cx('user-fetch-img')}>
+        {<img src={imagesrc} alt='userImage' width='55' height='55'/>}
+      </span>
       <span className={cx('user-state1')}>
         <div>
           <span className={cx('age-sex')}>
-            `30대 남자
+            {age} {sex}
             </span>
-          <span className={cx('date')}>2018.03.11 등록</span>
+          <span className={cx('date')}>{date} 등록</span>
         </div>
         <div className={cx('user-state2')}>
-          현재 거주중 · 전세 또는 월세 · 기혼
+          {whenYouLive} · {resiType} · {marrital}
         </div>
       </span>
     </div>
 
     <div className={cx('user-review')}>
-      <div>
+      <span className={cx('review-title')}>
         <span className={cx('item-title')}>교통여건</span>
-        <span className={cx('item-rating-state')}>3.0 별별별별별</span>
-      </div>
+        <span className={cx('item-rating-state')}>{trafficScore} </span>
+        <span className={cx('item-star')}>
+          <ReactStars
+          count={5} size={15}
+          value={localStorage['교통여건 점수']}
+          color1={"#e9ecef"} color2={"#fca730"}
+          edit={false}
+          />
+        </span>
+      </span>
       <div className={cx('review-state-text')}>
-        단지가 커서 버스타느 곳까지 거리가 오래 걸림 단, 9호선이 개통하면 지하철 여건은 개선 예정
+        {trafficText}
       </div>
     </div>
+
     <div className={cx('user-review')}>
-      <div>
+      <div className={cx('review-title')}>
         <span className={cx('item-title')}>주변환경</span>
-        <span className={cx('item-rating-state')}>4.0 별별별별별</span>
+        <span className={cx('item-rating-state')}>{envirScore}</span>
+        <span className={cx('item-star')}>
+        <ReactStars
+                count={5} size={15}
+                value={localStorage['주변환경 점수']}
+                color1={"#e9ecef"} color2={"#fca730"}
+                edit={false}
+                />
+        </span>
       </div>
       <div className={cx('review-state-text')}>
-        올림픽공원,탄천의 접근성은 좋지만, 상가가 올림픽상가 밖에 없어서(단지 내 조금한 상가는 있음) 식사를 할 곳이 별로 없음(햄버거 등)
+        {envirText}
       </div>
     </div>
     <div className={cx('mygit')}>

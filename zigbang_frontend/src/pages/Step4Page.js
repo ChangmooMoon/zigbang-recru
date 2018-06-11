@@ -1,12 +1,12 @@
 import React from "react";
 import FinalHeader from "components/atom/FinalHeader";
-import Step4View from "components/StepView/Step4View"
+import Step4Container from "containers/Step4Container";
 
 const Step4Page = () => {
   return (
     <div>
       <FinalHeader />
-      <Step4View />
+      <Step4Container />
     </div>
   );
 };

@@ -3,27 +3,27 @@ import Step3View from 'components/StepView/Step3View'
 
 class Step3Container extends Component {
   state = {
-      '자가 거주': false,
-      '전세 또는 월세': false,
-//==================
-      '2013년 거주': false,
-      '2014년 거주': false,
-      '2015년 거주': false,
-      '2016년 거주': false,
-      '2017년 거주': false,
-      '현재 거주 중': false,
-//==================
-      '20대': false,
-      '30대': false,
-      '40대': false,
-      '50대': false,
-      '60대 이상': false,
-//==================
-      '남자': false,
-      '여자': false,
-//==================
-      '기혼': false,
-      '미혼': false,
+        '자가 거주': false,
+        '전세 또는 월세': false,
+        //
+        '2013년 거주': false,
+        '2014년 거주': false,
+        '2015년 거주': false,
+        '2016년 거주': false,
+        '2017년 거주': false,
+        '현재 거주 중': false,
+        //
+        '20대': false,
+        '30대': false,
+        '40대': false,
+        '50대': false,
+        '60대 이상': false,
+        //
+        '남자': false,
+        '여자': false,
+        //
+        '기혼': false,
+        '미혼': false,
   }
   handleResiType1 = () => {
     this.setState({
@@ -140,7 +140,7 @@ class Step3Container extends Component {
       '30대': false,
       '40대': false,
       '50대': false,
-      '60대 이상': !this.state['60대']
+      '60대 이상': !this.state['60대 이상']
     })
   }
   handleSex1 = () => {
@@ -168,8 +168,52 @@ class Step3Container extends Component {
     })
   }
 
-  componentWillUpdate(nextProps,nextState){
-    localStorage.setItem('user_info2',JSON.stringify(this.state))
+  componentDidUpdate(nextProps,nextState){
+    // state에서 true인 값들만 다 추출해서 로컬스토리지로 던진다
+    // 텍스트 형태로 파싱이 되서 들어가기때문에 좀 길어져도 나중에 불러올때 편한듯
+    // storage.setItem(keyName, keyValue);
+    // storage.removeItem(keyName);
+    for(let prop in this.state){
+      if(this.state[prop]){
+        switch(prop){
+          case '자가 거주' : localStorage.setItem('거주 형태',prop)
+          break;
+          case '전세 또는 월세': localStorage.setItem('거주 형태',prop)
+          break;
+          case '2013년 거주' : localStorage.setItem('거주 시기',prop)
+          break;
+          case '2014년 거주' : localStorage.setItem('거주 시기',prop)
+          break;
+          case '2015년 거주' : localStorage.setItem('거주 시기',prop)
+          break
+          case '2016년 거주' : localStorage.setItem('거주 시기',prop)
+          break
+          case '2017년 거주' : localStorage.setItem('거주 시기',prop)
+          break
+          case '현재 거주 중' : localStorage.setItem('거주 시기',prop)
+          break
+          case '20대' : localStorage.setItem('연령',prop)
+          break
+          case '30대' : localStorage.setItem('연령',prop)
+          break
+          case '40대' : localStorage.setItem('연령',prop)
+          break
+          case '50대' : localStorage.setItem('연령',prop)
+          break
+          case '60대 이상' : localStorage.setItem('연령',prop)
+          break
+          case '남자' : localStorage.setItem('성별',prop)
+          break
+          case '여자' : localStorage.setItem('성별',prop)
+          break
+          case '기혼' : localStorage.setItem('결혼여부',prop)
+          break
+          case '미혼' : localStorage.setItem('결혼여부',prop)
+          break
+          default: return null;
+        }
+      }
+    }
   }
 
   render() {
@@ -232,7 +276,7 @@ class Step3Container extends Component {
         age30={this.state['30대']}
         age40={this.state['40대']}
         age50={this.state['50대']}
-        age60={this.state['60대']}
+        age60={this.state['60대 이상']}
         male={this.state['남자']}
         female={this.state['여자']}
         yes={this.state['기혼']}

@@ -69,8 +69,10 @@ class Step2Container extends Component {
     })
   }
 
-  componentWillUpdate(nextProps,nextState){
-    localStorage.setItem('user_info1',JSON.stringify(this.state))
+  componentDidUpdate(nextProps,nextState){
+    for(let prop in this.state){
+      localStorage.setItem(prop,JSON.stringify(this.state[prop]))
+    }
   }
 
   render() {
@@ -133,7 +135,7 @@ class Step2Container extends Component {
         collapse3={collapse3}
         onStarRating1={onStarRating1}
         onStarRating2={onStarRating2}
-        traffic_con_star={this.state['교통평가 점수']}
+        traffic_con_star={this.state['교통여건 점수']}
         circum_star={this.state['주변환경 점수']}
         user_dong={this.state['동']}
         dongFloorInfo={dongFloorInfo}

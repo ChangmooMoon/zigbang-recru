@@ -16,7 +16,6 @@
         .user-fetch-img{
             width: 15vw;
             height: 15vw;
-            background: url('http://s.zigbang.com/v2/danji/review_m_30.png') no-repeat;
             margin: 0.5rem 1rem 0.5rem 1rem;
         }
         .user-state1{
@@ -37,18 +36,31 @@
     }
     .user-review{
         margin: 0.5rem 1rem 0 1rem;
-        .item-title{
-            font-weight: bold;
-            padding-right: 0.5rem;
-            border-right: 1px solid $oc-gray-4;
-        }
-        .item-rating-state{
-            font-weight: bold;
-            padding-left: 0.5rem;
-        }
-        .review-state-text{
-            color: $oc-gray-7;
-        }
+        display: block;
+            .review-title{
+                display: flex;
+                .item-title{
+                    font-weight: bold;
+                    padding-right: 0.5rem;
+                    border-right: 1px solid $oc-gray-4;
+                    }
+                .item-rating-state{
+                    font-weight: bold;
+                    padding-left: 0.5rem;
+                    }
+                .item-star{
+                padding-left : 0.5rem;
+                }
+            }
+            .review-state-text{
+                overflow: hidden;
+                width: 100%;
+                height: auto;
+                padding: 0.5rem;
+                color: $oc-gray-7;
+                font-size: 0.7rem;
+                font-weight: bold;
+                }
     }
     .mygit{
         display: flex;
