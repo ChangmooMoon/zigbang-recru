@@ -27,21 +27,21 @@ Everything in this project is in JavaScript.
 
 
 ### yarn start!
-###
-###└── src
-###    ├── components
-###    │   ├── StepView : step별로 주요 내용의 view만을 구현해놓은 컴포넌트폴더
-###    │   ├── atom : 몇번 안 쓰이는 컴포넌트들을 모아놓은 폴더. 마지막 스텝의 헤더 컴포넌트가 들어있음.
-###    │   │   └── FinalHeader
-###    │   └── common 자주 쓰이는 컴포넌트(header,Footer, 페이지 템플릿)들을 모아놓은 폴더. 재사용성을 위해서 만듬
-###    │       ├── FooterNextPageButton
-###    │       ├── FooterPrevPageButton
-###    │       ├── Header
-###    │       └── PageTemplate
-###    ├── containers 각 페이지별 라이프사이클 함수 등이 구현되있는 컨테이너 클래스 컴포넌트 폴더.
-###    ├── lib json파일이 들어있음(주거정보 데이터)
-###    ├── pages 라우팅이 되어있는 페이지 컴포넌트이다. 각 페이지 컴포넌트 안에 container component가 들어있다
-###    ├── static : 정적 이미지 폴더
-###    │   └── images
-###    └── styles: sass 스타일링 라이브러리 폴더
-###        └── lib
+-
+-└── src
+-    ├── components
+-    │   ├── StepView : step별로 주요 내용의 view만을 구현해놓은 컴포넌트폴더
+-    │   ├── atom : 몇번 안 쓰이는 컴포넌트들을 모아놓은 폴더. 마지막 스텝의 헤더 컴포넌트가 들어있음.
+-    │   │   └── FinalHeader
+-    │   └── common 자주 쓰이는 컴포넌트(header,Footer, 페이지 템플릿)들을 모아놓은 폴더. 재사용성을 위해서 만듬
+-    │       ├── FooterNextPageButton
+-    │       ├── FooterPrevPageButton
+-    │       ├── Header
+-    │       └── PageTemplate
+-    ├── containers 각 페이지별 라이프사이클 함수 등이 구현되있는 컨테이너 클래스 컴포넌트 폴더.
+-    ├── lib json파일이 들어있음(주거정보 데이터)
+-    ├── pages 라우팅이 되어있는 페이지 컴포넌트이다. 각 페이지 컴포넌트 안에 container component가 들어있다
+-    ├── static : 정적 이미지 폴더
+-    │   └── images
+-    └── styles: sass 스타일링 라이브러리 폴더
+-        └── lib
